@@ -15,6 +15,9 @@ public static class ServicesConfiguration
         services.AddScoped<CatalogLookupDataService<CatalogType, CatalogTypeResponse>>();
         services.AddScoped<ICatalogItemService, CachedCatalogItemServiceDecorator>();
         services.AddScoped<CatalogItemService>();
+        services.AddScoped<IOrderService, CachedOrderServiceDecorator>();
+        services.AddScoped<OrderService>();
+
 
         return services;
     }
